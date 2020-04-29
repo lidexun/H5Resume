@@ -1,0 +1,86 @@
+cubic_bezier = cubic-bezier(0.87, -0.41, 0.19, 1.44)
+
+bg_init(){
+	background-position center;
+	background-repeat no-repeat;
+	background-size cover
+	background-color transparent
+}
+/*flex布局*/
+flex(){
+	display flex;
+	flex-direction column;
+    align-items stretch;
+	align-content flex-start;
+	width 100%;
+}
+
+align_items(c = center){
+	align-items c
+}
+justify_content(c = center){
+  justify-content c
+}
+flex_center(){
+	display flex;
+	align_items()
+	justify_content()
+}
+
+swipe_title(){
+	font-size 0.32rem
+	position absolute
+	top 0.5rem
+	left 0
+	right 0
+	text-align center
+	flex()
+	&:before {
+		content: attr(data-title);
+		font-size: 0.4rem;
+    }
+    &:after {
+		content: attr(data-text);
+		font-size: 0.2rem;
+    }
+}
+
+
+fade_up_10(duration=300,$time=300){
+    animation-name: fade_up_10;
+    animation-fill-mode: both;
+	animation-duration: (duration)ms;
+	animation-delay: ($time)ms;
+	animation-timing-function: cubic_bezier
+}
+@keyframes fade_up_10{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+fade_left_10(duration=300,$time=300){
+    animation-name: fade_left_10;
+    animation-fill-mode: both;
+	animation-duration: (duration)ms;
+	animation-delay: ($time)ms;
+	animation-timing-function: cubic_bezier
+}
+@keyframes fade_left_10{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(20px);
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
