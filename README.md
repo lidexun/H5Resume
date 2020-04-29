@@ -1,24 +1,13 @@
-# my
+# H5Resume
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+# 介绍
+- 一个H5简历
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# 使用的框架
+|框架|描述|地址
+|---|---|---|
+|Vue|Vue|  https://cn.vuejs.org/|
+|swiper|JS|  https://www.swiper.com.cn/
+|stylus|CSS预处理器| https://www.apicloud.com/
+|fortawesome|ICON库|  https://fontawesome.com/icons
