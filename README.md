@@ -1,5 +1,5 @@
 # H5Resume
-
+<a href="https://lidexun.gitee.io/h5resume/" target="_blank">在线预览</a>
 
 # 介绍
 - 一个H5简历
