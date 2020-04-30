@@ -10,7 +10,7 @@
         <br />
         虽然俩年前有写过，不过现在想用webpack方式重新写
         <br />
-         vue+swipe+stylus+fortawesome+REM(兼用移动端)
+         vue+swipe+stylus+fortawesome+rem(移动端适配))
       </div>
       <div class="one_btn">
         <span v-for="item in btn" :key="item.text" @click.stop.prevent="openWin(item.url)" v-text="item.text">
@@ -65,7 +65,7 @@ export default {
   align-items center
   justify-content center
   flex-direction: column;
-  height 100vh
+  height 100%
   padding 0 0.1rem
   .one_phone{
     background-image: url('https://lidexun.gitee.io/blog/hero.png');
@@ -89,7 +89,6 @@ export default {
     fade_up_10(700,700)
   }
   .one_tips{
-    font-size 0.18rem
     margin-top 0.15rem
     fade_up_10(800,800)
   }

@@ -96,7 +96,7 @@ export default {
 @import '../../stylus/common.styl';
 
 .two {
-  height: 100vh;
+  height: 100%;
   position: relative;
   flex();
   align_items();

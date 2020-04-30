@@ -68,7 +68,7 @@ export default {
 @import '../../stylus/common.styl';
 
 .five {
-  height: 100vh;
+  height: 100%;
   position: relative;
   flex();
   align_items();

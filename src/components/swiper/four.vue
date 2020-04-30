@@ -93,7 +93,8 @@ export default {
           logo: "https://lidexun.gitee.io/phone/assets/code/logo.jpg",
           percentage: "80%"
         }
-      ]
+      ],
+      timeOut:null
     };
   },
   mounted(){
@@ -103,11 +104,13 @@ export default {
     init (flag){
       var self = this;
       if(flag){
-        setTimeout(() => {
+         this.timeOut = setTimeout(() => {
           self.initon = flag;
         }, self.list.length *  350);
       } else {
-        this.initon = flag;
+         clearTimeout(this.timeOut);
+         this.timeOut = null;
+         this.initon = flag;
       }
     }
   }
@@ -118,7 +121,7 @@ export default {
 @import '../../stylus/common.styl';
 
 .four {
-  height: 100vh;
+  height: 100%;
   position: relative;
   flex();
   align_items();

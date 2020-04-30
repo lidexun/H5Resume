@@ -45,7 +45,7 @@ export default {
           time: "2016年10月 - 2017年05月",
           text: "技术部：H5/移动端前端",
           logo: 'https://lidexun.gitee.io/phone/assets/logo/logo_1.jpg',
-          content: '内容：负责PC/响应式/移动/后端管理系统'
+          content: '内容：负责PC/响应式/移动'
         },
         {
           name: "广州腾骥网络科技有限公司",
@@ -67,7 +67,7 @@ export default {
   flex();
   justify_content();
   padding: 0 0.2rem;
-  height: 100vh;
+  height: 100%;
 
   .two_title {
     swipe_title();

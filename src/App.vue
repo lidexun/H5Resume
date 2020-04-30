@@ -1,6 +1,5 @@
 <template>
   <div id="app" :data-text="Uptext">
-    <my v-show="false"></my>
     <swiper class="my_swiper" ref="mySwiper" :options="swiperOptions">
       <swiper-slide>
         <one v-bind:swiperIndex="swiperIndex" v-bind:index="0"></one>
@@ -23,7 +22,6 @@
 
 <script>
 import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
-import my from "@/components/my/my";
 import one from "@/components/swiper/one";
 import two from "@/components/swiper/two";
 import three from "@/components/swiper/three";
@@ -37,7 +35,6 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    my,
     one,
     two,
     three,
@@ -84,7 +81,7 @@ export default {
     swiper() {
       return this.$refs.mySwiper.$swiper;
     }
-  }
+  },
 };
 </script>
 
@@ -92,12 +89,11 @@ export default {
 @import 'stylus/init.styl';
 @import 'stylus/common.styl';
 
+html{
+  html();
+}
 html, #app {
   height: 100%;
-}
-
-body {
-  // background: linear-gradient(to top, #ecf6ff 50%, #fefefe);
 }
 
 body::before, body::after {
@@ -133,7 +129,11 @@ body::after {
 
 .my_swiper {
   height: 100vh;
-  max-width: 9.7rem;
+  // max-width: 9.7rem;
+  .swiper-slide{
+     max-width 10rem;
+     margin 0 auto
+  }
 }
 
 #app::after {
@@ -146,57 +146,9 @@ body::after {
   margin: 0 auto;
   color: rgba(0, 0, 0, 0.5);
   font-size 0.14rem
+  transform: translateY(constant(safe-area-inset-bottom));
+  transform: translateY(safe-area-inset-bottom);
   fade_up_10(1000,1300);
   // -webkit-animation: top 1s 1s linear both infinite;
-}
-// @keyframes top {
-//   0% {
-//     opacity: 0;
-//     transform: translateY(0%);
-//   }
-
-//   50% {
-//     opacity: 1;
-//     transform: translateY(-30%);
-//   }
-
-//   100% {
-//     opacity: 0;
-//     transform: translateY(-60%);
-//   }
-// }
-
-@keyframes fa_up_10 {
-  0%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
-
-  20%, 40%, 60%, 80% {
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
-  }
-}
-
-@keyframes fa_left_10 {
-  0%, 100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-
-  10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translateX(-10px);
-    transform: translateX(-10px);
-  }
-
-  20%, 40%, 60%, 80% {
-    -webkit-transform: translateX(10px);
-    transform: translateX(10px);
-  }
 }
 </style>
